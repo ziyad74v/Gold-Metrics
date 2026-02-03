@@ -106,8 +106,20 @@ function calculateSpread() {
     document.getElementById("spreadPercent").textContent = percent.toFixed(2);
 }
 
+// ده كود الانميشن 
 
+const numSpikes = 50;
+const container = document.querySelector('.spike-container');
 
-
+for(let i=0; i<numSpikes; i++){
+    const spike = document.createElement('div');
+    spike.classList.add('spike');
+    spike.style.left = Math.random() * window.innerWidth + 'px';
+    spike.style.animationDuration = (2 + Math.random() * 3) + 's';
+    spike.style.opacity = Math.random() * 0.8 + 0.2;
+    container.appendChild(spike);
+}
+// ده كود الانميشن 
+// اخروهه
 
 loadData();
